@@ -1,70 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surat Permintaan Maaf Dari Revan</title>
-<style>
-    body {
-    margin: 0;
-    padding: 0;
-    background: #0f2027;
-    color: white;
 
-    min-height: 100vh;
-    width: 100%;
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0f2027;
+            color: white;
+            font-family: Arial, sans-serif;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-</style>
-</head>
-    <h2>Surat Permintaan Maaf Dari Revan</h2>
-    
-    <button onclick="mintaMaaf()">
-        Klik di sini
-    </button>
-
-    <p id="hasil" style="
-        margin-top:30px; 
-        font-size:18px; 
-        max-width:600px; 
-        margin-left:auto; 
-        margin-right:auto;
-        line-height:1.6;
-    "></p>
-
-    <script>
-        function mintaMaaf() {
-            let nama = prompt("Masukin nama kamu dulu ya:");
-
-            if (nama != null && nama != "") {
-                document.getElementById("hasil").innerHTML =
-                "Hai " + nama + ",<br><br>" +
-                "Aku mau minta maaf ya soal kemarin.<br>" +
-                "Aku sadar aku kebawa emosi dan ikut memperbesar masalah yang harusnya bisa diselesaikan baik-baik.<br>" +
-                "Harusnya aku bisa lebih tenang dan nggak ngomong kasar di chat.<br><br>" +
-                "Sebentar lagi kita mau masuk bulan Ramadhan <br>" +
-                "Aku nggak mau ada salah paham atau rasa nggak enak di antara kita.<br>" +
-                "Kalau ada kata-kata atau sikapku yang nyakitin, aku bener-bener minta maaf.<br><br>" +
-                "Semoga kita bisa mulai Ramadhan dengan hati yang lebih bersih dan hubungan yang lebih baik lagi.<br>" +
-                "Terima kasih udah mau baca ini 🙏";
-            } else {
-                document.getElementById("hasil").innerHTML =
-                "Nama Kaga boleh Kosong Woi";
-            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
-    </script>
+
+        .container {
+            text-align: center;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: clamp(22px, 5vw, 32px);
+        }
+
+        button {
+            display: block;
+            margin: 25px auto;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #hasil {
+            margin-top: 25px;
+            line-height: 1.6;
+            font-size: clamp(14px, 3.5vw, 18px);
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Surat Permintaan Maaf Dari Revan</h1>
+    <button onclick="mintaMaaf()">Klik di sini</button>
+    <p id="hasil"></p>
+</div>
+
+<script>
+function mintaMaaf() {
+    let nama = prompt("Masukin nama kamu dulu ya:");
+
+    if (nama && nama.trim() !== "") {
+        document.getElementById("hasil").innerHTML =
+        "Hai " + nama + ",<br><br>" +
+        "Aku mau minta maaf ya soal kemarin. Aku sadar aku kebawa emosi dan ikut memperbesar masalah.<br>" +
+        "Harusnya aku bisa lebih tenang dan nggak ngomong kasar.<br><br>" +
+        "Sebentar lagi kita mau masuk bulan Ramadhan <br>" +
+        "Aku nggak mau ada salah paham di antara kita.<br>" +
+        "Kalau ada kata atau sikapku yang nyakitin, aku bener-bener minta maaf.<br><br>" +
+        "Semoga kita bisa mulai Ramadhan dengan hati yang lebih bersih 🙏";
+    } else {
+        document.getElementById("hasil").innerHTML =
+        "Nama Kaga Boleh Kosong Woi";
+    }
+}
+</script>
 
 </body>
 </html>
